@@ -4,9 +4,9 @@ const inquirer = require("inquirer");
 const {Circle, Triangle, Square} = require("./lib/shapes");
 
 // Declare Svg class.
-class Svg{
+class Svg {
 // Constructor with three methods for rendering and setting the text and shape elements in the SVG string.
-    constructor(){
+    constructor() {
         this.textElement = ''
         this.shapeElement = ''
     }
@@ -18,7 +18,6 @@ class Svg{
     }
     setShapeElement(shape) {
         this.shapeElement = shape.render()
-
     } 
 };
 
@@ -47,3 +46,44 @@ const questions = [
     },
 ];
 
+// Begin function to save user data to filesystem.
+function writeToFile(fileName, data) {
+	console.log("Saving [" + data + "] to file [" + fileName + "]")
+    filesystem.writeFile(fileName, data, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("You have successfully generated a logo.svg!");
+    });
+};
+
+// Begin function to generate logo.svg.
+async function init() {
+    console.log("Initilizing SVG Logo Maker");
+	var svgString = "";
+	var svg_file = "logo.svg";
+// Declare answers using user input from questions.
+    const answers = await inquirer.prompt(questions);
+// Declare user_text using user input from answers.
+    var user_text = "";
+    if (answers.text.length > 0 && answers.text.length < 4) {
+// Validate user has enetered 1-3 letters.
+        user_text = answers.text;
+    } else {
+// If 0 or 4+ letters, display error.
+        console.log("Please enter a valid number of letters (1-3)");
+        return;
+    }
+// Display the number of letters selected by user in console.
+    console.log("User text: [" + user_text + "]");
+// Declare user_font_color using user input from answers. Display user_font_color in console.
+    user_font_color = answers["text-color"];
+    console.log("User font color: [" + user_font_color + "]");
+// Declare user_shape_type using user input from answers. Display user_shape_type in console.
+    user_shape_type = answers["pixel-image"];
+    console.log("User entered shape = [" + user_shape_type + "]");
+// Declare user_shape_color using user input from answers. Display user_shape_color in console.
+    user_shape_color = answers.shape;
+    console.log("User shape color: [" + user_shape_color + "]");
+
+    
