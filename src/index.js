@@ -21,7 +21,7 @@ class Svg {
     } 
 };
 
-// Declare questions as an array using the inquirer. Each question is an object that specifies the properties of TEXT, TEXT COLOR, SHAPE COLOR, and Pixel Image.
+// Declare questions as an array using inquirer. Each question is an object that specifies the properties of text, text-color, pixel-image and shape.
 const questions = [
     {
         type: "input",
@@ -58,7 +58,7 @@ function writeToFile(fileName, data) {
 };
 
 // Begin function to generate logo.svg.
-async function init() {
+async function generate() {
     console.log("Initilizing SVG Logo Maker");
 	var svgString = "";
 	var svg_file = "logo.svg";
@@ -85,5 +85,37 @@ async function init() {
 // Declare user_shape_color using user input from answers. Display user_shape_color in console.
     user_shape_color = answers.shape;
     console.log("User shape color: [" + user_shape_color + "]");
-
+// Declare user_shape. Create new user_shape using user input from user_shape_type. Display message with user selected shape in console. Display error for invalid shape.
+    let user_shape;
+    if (user_shape_type === "Square" || user_shape_type === "square") {
+        user_shape = new Square();
+        console.log("You have selected Square!");
+    }
+    else if (user_shape_type === "Circle" || user_shape_type === "circle") {
+        user_shape = new Circle();
+        console.log("You have selected Circle!");
+    }
+    else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
+        user_shape = new Triangle();
+        console.log("You have selected Triangle!");
+    }
+    else {
+        console.log("Invalid shape!");
+    }
+// Set the color of user_shape using user input from user_shape_color.
+    user_shape.setColor(user_shape_color);
+// Declare new Svg instance and add the user's selected shape and text elements to it.
+	var svg = new Svg();
+	svg.setTextElement(user_text, user_font_color);
+	svg.setShapeElement(user_shape);
+	svgString = svg.render();
+// Display shape in log.
+	console.log("Displaying shape:\n\n" + svgString);
+// Save data to file and console log progress.
+	console.log("Shape generation complete!");
+	console.log("Writing shape to file...");
+	writeToFile(svg_file, svgString); 
+}
+// Initilize function to generate SVG.
+generate()
     
