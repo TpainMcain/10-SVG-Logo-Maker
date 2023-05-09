@@ -27,7 +27,7 @@ This app utilizes Inquirer 8.2.4 to allow users to generate a .SVG image "logo" 
 * Follow the prompts to define your logo.
 * Open the generated logo.SVG with a web browser to see your new logo! 
 ### Visual Walkthrough
-
+https://drive.google.com/file/d/1iHDiEnmdr6rCclUjoaesgl_5qxG5OM-h/view
     
 ## License
 Permission to use this application is granted under the MIT license.
