@@ -13,7 +13,12 @@
 This app utilizes NPM Inquirer to allow users to generate a .SVG image "logo" with their choice of text, shape and color. 
   
 ## Installation Instructions
-
+  ### Node.js installation
+  Verify node.js installed on your computer by opening a terminal and typing node -v in the command line. If successful, the command prompt will return a version number. If not, try reinstalling Node.js by following this link: https://nodejs.org/en/.
+  ###  Download or clone the code
+  Click on the green code button to download or clone this repository. Extract the files and open with your favorite code editor.
+  ### Inquirer
+  Ensure dependencies are installed by navigating to index.js in the terminal and typing npm i -y.
   
 ## Usage Instructions
 
