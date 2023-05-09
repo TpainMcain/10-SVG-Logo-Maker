@@ -18,7 +18,7 @@ This app utilizes NPM Inquirer to allow users to generate a .SVG image "logo" wi
   ###  Download or clone the code
   Click on the green code button to download or clone this repository. Extract the files and open with your favorite code editor.
   ### Inquirer
-  Ensure dependencies are installed by navigating to index.js in the terminal and typing npm i -y.
+  Inquirer is an npm package instead of being built directly into node.js. To install, navigate to index.js in the terminal and type npm i -y.
   
 ## Usage Instructions
 
