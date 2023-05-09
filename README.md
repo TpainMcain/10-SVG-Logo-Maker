@@ -10,7 +10,7 @@
   - [Contact Me](#contact-me)
   
 ## Description
-
+This app utilizes NPM Inquirer to allow users to generate a .SVG image "logo" with their choice of text, shape and color. 
   
 ## Installation Instructions
 
