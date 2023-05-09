@@ -23,9 +23,9 @@ This app utilizes Inquirer 8.2.4 to allow users to generate a .SVG image "logo" 
 ## Usage Instructions
 * Open this repository with your favorite code editor.
 * Navigate to index.js in the terminal.
-* type node index.js in the terminal to initilize the app.
-* Follow prompts to define your logo.
-* Open the generated logo.SVG with a web browser to see your logo! 
+* Type node index.js in the terminal to initilize the app.
+* Follow the prompts to define your logo.
+* Open the generated logo.SVG with a web browser to see your new logo! 
 ### Visual Walkthrough
 
     
