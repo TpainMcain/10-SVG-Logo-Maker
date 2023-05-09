@@ -21,7 +21,7 @@ This app utilizes Inquirer 8.2.4 to allow users to generate a .SVG image "logo" 
   Inquirer is an npm package instead of being built directly into node.js. To install, navigate to index.js in the terminal and type npm i -y.
   
 ## Usage Instructions
-
+* Open this repository with your favorite code editor
 ### Visual Walkthrough
 
     
