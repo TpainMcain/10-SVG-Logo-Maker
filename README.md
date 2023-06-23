@@ -33,9 +33,6 @@ This app utilizes Inquirer 8.2.4 to allow users to generate a .SVG image "logo" 
 Permission to use this application is granted under the MIT license.
 Click on the link for more information: [MIT License Information](https://opensource.org/licenses/MIT)
   
-## Credits
-https://github.com/ThomasCalle
-  
 ## Contact Me
 GitHub Link: (https://github.com/TpainMcain)<br>
 Email Address: <Trevorwp77@gmail.com>
